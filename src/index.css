@@ -1,0 +1,48 @@
+@import './tailwind.css';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Highlight animation for target section */
+@keyframes highlight {
+  from {
+    background-color: rgba(0, 123, 255, 0.3);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+.highlight {
+  animation: highlight 1s ease-in-out;
+}
+/* Add this to your global CSS file (e.g., index.css) */
+.dynamic-role {
+  display: inline-block;
+  position: relative;
+  animation: changeRole 2s linear infinite;
+}
+
+@keyframes changeRole {
+  0%, 25%, 75%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
