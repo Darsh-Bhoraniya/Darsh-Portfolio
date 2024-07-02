@@ -50,4 +50,13 @@
     border-radius: 4px;
     color: #282c34;
   }
+  .section-offset {
+    padding-top: 4rem; /* Adjust this value based on your header height */
+  }
+  
+  .highlight {
+    /* Highlight effect for the target section */
+    background-color: rgba(255, 255, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
   

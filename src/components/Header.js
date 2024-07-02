@@ -1,21 +1,27 @@
-// src/components/Header.js
 import React from "react";
 
 const Header = () => {
   const handleNavigation = (event, targetId) => {
     event.preventDefault();
     const targetElement = document.getElementById(targetId);
-    
-    // Scroll to the target element
-    targetElement.scrollIntoView({ behavior: "smooth" });
 
-    // Add the highlight animation
+    // Get the height of the header
+    const headerHeight = document.querySelector("header").offsetHeight;
+
+    // Calculate the offset position
+    const offsetPosition = targetElement.offsetTop - headerHeight;
+
+    // Scroll to the offset position
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+
     targetElement.classList.add("highlight");
 
-    // Remove the highlight animation after it's done
     setTimeout(() => {
       targetElement.classList.remove("highlight");
-    }, 1000); // Match this duration with the animation duration
+    }, 1000);
   };
 
   return (
@@ -60,15 +66,6 @@ const Header = () => {
                 onClick={(e) => handleNavigation(e, "profile")}
               >
                 Profile
-              </a>
-            </li>
-            <li>
-              <a
-                href="#skills"
-                className="text-lg hover:text-blue-400 transition duration-300"
-                onClick={(e) => handleNavigation(e, "skills")}
-              >
-                Skills
               </a>
             </li>
             <li>
