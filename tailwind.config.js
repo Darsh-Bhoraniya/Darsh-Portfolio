@@ -1,12 +1,19 @@
-// tailwind.config.js
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}', // Adjust the paths according to your project structure
+  ],
   theme: {
     extend: {},
   },
-  variants: {
+  plugins: [],
+};
+module.exports = {
+  darkMode: 'media', // or 'class' if you prefer
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}', // Adjust the paths according to your project structure
+  ],
+  theme: {
     extend: {},
   },
   plugins: [],
-}
+};
