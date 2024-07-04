@@ -38,7 +38,122 @@
     text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 60px #0ff, 0 0 70px #0ff;
   }
 }
+/* Background color */
+.bg-dark {
+  background-color: #1a1a2e;
+}
 
-.animate-glow {
-  animation: glow 1.5s ease-in-out infinite alternate;
+/* Accent color for the name */
+.text-accent {
+  color: lightskyblue;
+}
+
+/* Fade animation for the name */
+@keyframes fade {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-fade {
+  animation: fade 2s infinite;
+}
+
+/* Dynamic role animation */
+.dynamic-role {
+  display: inline-block;
+  position: relative;
+}
+
+.dynamic-role::after {
+  content: '|';
+  position: absolute;
+  right: -10px;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Centering and padding */
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.sm\:px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.lg\:px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.md\:text-6xl {
+  font-size: 4rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+}
+
+.md\:text-4xl {
+  font-size: 2.25rem;
 }
