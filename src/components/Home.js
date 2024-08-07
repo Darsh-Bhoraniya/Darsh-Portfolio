@@ -23,6 +23,9 @@ const Home = () => {
           <h2 className="text-2xl md:text-4xl font-semibold mb-8">
             <span className="dynamic-role">{roles[currentRoleIndex]}</span>
           </h2>
+          <a href="/Darsh_Bhoraniya_CV.pdf" download className="btn btn-primary mt-4">
+            Download CV
+          </a>
         </div>
       </div>
     </section>
