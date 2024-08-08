@@ -33,9 +33,7 @@ const About = () => {
               and creative.
             </p>
             <p className="mb-4 text-lg">
-              I've updated your information to include your current work with
-              React.js and Node.js. Here's an updated version of your experience
-              and goals: I have experience working with technologies such as
+              I have experience working with technologies such as
               React.js, Node.js, ASP.NET MVC, SQL Server, and Tailwind CSS. I
               have built projects including a bookshelving web API and an admin
               panel for a book management system. My goal is to leverage my
